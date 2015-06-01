@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns ="http://ssyakos.blog.me" mainfast="index.html" >
+<head>
+<meta charset="EUC-KR"> 
+<title>톰캣 연동 이클립스로 처음 만든 HTML 파일!문법 정리용</title>
+</head> 
+<body>
+
+</body>
+</html> 
+<!---------------------------------------------------이곳아래는 주석 --------------------------->
+<!-- 자바에서는 /*와 */엿지만 html 에서는 이렇다.. -->
+
+<!-- <!DOCTYPE html> --> <!-- DOCTYPE = Dodument Type을 나타낸다..-->
+<!--이러한 정의를 DTD(Document Type Definition : 문서 형식 정의) 라고 하며
+이것은 HTML내의  태그 가 아니고 그저 해당 HTML문서의 형식을    표    시  하는 것이다. 그리고 HTML문서의 윗줄에만 존재한당-->
+<!-- 
+<!DOCTYPE> 의 속성과  값 
+TopElemnt(최상위 요소)		HTML
+현재 문서 형식의 가장 최상위 표준이 되는 것은 언어의 종류이다  현재 문서는 Html 문서이므로 값은 html 만 사용.
+하지만 별도의 표준을 만들어 내부적으로 사용할 수도 있다.
+
+Availability							PUBLIC  , SYSTEM
+일반적으로 사용되는 표준 정의를 적용할 경우 PUBLIC을 특성 시스템에서 별도로 정의된 표준을 사용 할 경우 SYSTEM을 값으로 사용한다.
+일반적인 HTML 문서는 공용 표준을 사용하기 때문에 PUBLIC을 값으로 사용.
+
+Registration						+,-
+DTD표준을 정의한 기관이 등록된 경우  '+' , 비공개 비관일 경우 '-' 를 사용. 인터넷 표준에 대한 규격을 IETF(Internet Engineering Task Force)나 
+W3C(World Wide Web Consortium)의 경우 비공인 기관이므로 - 를 사용.
+
+Oraganization					W3C,IETF
+적용할 DTD 규격을 개발한 기관의 이름을 값으로 사용합니다. 이값은 Resistration 값 뒤에  ' // ' 로 구분하여 표시.
+
+Type									DTD
+문서 규격의 형식을 값으로 사용.DTD는 표준 문서 규격.
+
+Label									HTML , HTML4.0 , HTML4.01 , XHTML , XHTML1.0 , XHTML1.1
+사용되는 언어의 형식을 값으로 사용. 대표적으로 HTML과 XHTML이 있으며, 
+각 언어형식별로 버전마다 다른 정의를 가지므로 버전까지 값으로 사용.
+
+Definition							Strict ,Transitional , Frameset
+각 언어에 대한 확장 정의 값.
+Strict : 기본 표준안
+Transitional : 기본 표준안에서 확장된 내용이 추가된 표준안
+Frameset : 프레임셋 사용을 위한 표준안 정의
+
+Language							EN,KO,JA,ZH
+정의된 표준안의 언어 형식 값입니다. 대부분의 표준안은 영어로 되어 있기 때문에 EN을 사용 하며, 별도의 정의 표준안 파일을 사용할 경우 다른 언어를 사용 할 수도 있다. 
+언어코드는 ISO639언어코드(2자리 영문 이니셜)를  사용
+
+ URL									http://www.w3.org/TR/html4/loose.dtd
+ 											http://www.w3.org/TR/html4/loose.dtd
+ 											http://www.w3.org/TR/xtml1/DXD/xhtml1-transitional.dtd
+ 											http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd
+ 											http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd
+ 											http://www.wapfoum.org/DTD/xhtml-mobile10.dtd
+ DTD파일의 url위치 값입니다.-->
+
+<html><!-- 문서의 시작-->
+<head> <!-- 문서 머리말 시작-->
+<meta charset="EUC-KR"> <!-- 메타테그 해당 문서는 다음과 같은 방식을 문자셋팅을 채용? 지정했다 라는 뜻이고
+													Extended Unix Code  KoRean- 확장 유닉스 코드(한중일:극동아시아 문서 전산화에 주로 이용되는 8비트 문자 인코딩방법)
+													 한글( 완성형 인코딩) 이라는 뜻이다(약자 이기도 하다)..
+													 메타태그처럼 HTML에서 닫지 않는 형식의 태그가 있기도 하지만 ..  
+													  
+													  그리고 HTML은 닫는 "/"를 대괄호 안 단어 시작 위치에 있으나.. 
+													 @@  X   T   M   L  은     단   어  의   끝   위   치 @@   에 있다.
+													 X T M L 에 서 는   닫 지   않는   태 그   였 던   태 그 들 도   닫 는   태 그 를  만 들 었 으니   유 의
+													-->
+
+<!-- 아래의 타이틀은 시작과 끝의 태그가 있고  그 사이는 익스플로러 플랫폼에 올라갈 문자 열을 넣는것인데.. 해당 웹페이지의 제목을 적는 것이라 보아도 되겟다.-->
+<title>톰캣 연동 이클립스로 처음 만든 HTML 파일!문법 정리용</title>
+</head> <!-- 문서 머리말 끝-->
+<body><!-- 본문내용 시작-->
+
+</body><!-- 본문 내용 끝-->
+</html><! -- 문서의 끝-->
+
