@@ -1,7 +1,14 @@
-<!DOCTYPE html>
-<html xmlns ="http://ssyakos.blog.me" mainfast="index.html" >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns ="http://blog.naver.com/ssaykos" lang="ko">
 <head>
-<meta charset="EUC-KR"> 
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta name="robots" content="noindex,follow"/>
+<meta http-equiv="Content-Type" content="text/html; charset=MS949"/>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1" />
+<link rel="alternate" type="application/rss+xml" href="http://blog.rss.naver.com/ssaykos.xml" title="RSS feed for ssaykos Blog"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.naver.com/NBlogWlwLayout.nhn?blogId=ssaykos" />
+
 <title>톰캣 연동 이클립스로 처음 만든 HTML 파일!문법 정리용</title>
 </head> 
 <body>
@@ -56,9 +63,64 @@ Language							EN,KO,JA,ZH
  											http://www.wapfoum.org/DTD/xhtml-mobile10.dtd
  DTD파일의 url위치 값입니다.-->
 
-<html><!-- 문서의 시작-->
-<head> <!-- 문서 머리말 시작-->
-<meta charset="EUC-KR"> <!-- 메타테그 해당 문서는 다음과 같은 방식을 문자셋팅을 채용? 지정했다 라는 뜻이고
+
+
+<!-- <html> --><!-- 문서의 시작-->
+<!-- 
+			속성 				 값
+			xmlns				http://www.w3.org/1999/xhtml
+html 문서는 html 또는 XHTML 두가지로 작성할 수 있습니다. 이속성은 XHTML로 문서를 작성할 때 참조햇던 사이트 주소가 값으로 사용됩니다.
+이 링크에는 XHTML 네임스페이스를 지정해주는 문서가 들어있습니다.
+			mainfest			캐시 로컬 파일 경로
+[HTML5] mainfest는 이론적으로 본다면 오프라인 상태에서의 웹 어플리케이션을 이용할 수 있도록 로컬에 캐시를 지정하는 것 이지만
+실제로는 방문한 사이트에 대한 빠른 로딩을 위한 지원과 서버에 대한 부담을 줄여주는 역활을 합니다. mainfest로 지정할 캐시 파일은 
+다음과 같은 형식으로 작성할 수 있습니다.
+
+CACHE MAINFAST
+index.html
+css.css
+images/img.jpg
+js/main.js
+mainfest 파일의 시작은 CACHE MAINFEST로 해야 하며 문자 코딩의 형식은  UTF-8입니다. 또한 MIME 타입 지정시 text/cache-mainfest 를 삽입합니다.
+mainfest 의 지원은 파이어폭스 / 크롬 / 사파리 / 오페라 등이고 익스플로러는 지원하지 않는다.
+
+//UTF-8 이란?Unicode Transformation Format의 약자로써 유니코드를 위한 가변 길이 문자 인코딩 방식 중 하나이다.
+-->
+<!-- <head> --> <!-- 문서 머리말 시작-->
+<!--  
+	헤드 태그 에는 < base> / <link> / <meta> / <noscript>~</noscript> / <script>~</script> / <style>~</style> / <title>~</title> 등이 있다.
+	헤드 태그는 단순히 영역만 정의 해주고 별도의 속성은 없다.
+	
+	헤드태그의 사용 이유
+	1.html문서안의 영역을 작성자가 구분해 표시하는 것은 문서의 작성과 수정의 효율에 매우 중요한 요소이다.
+	2.웹브라우 저의 프로세스에 영향을 주는데 헤드 태그 영역을 해석 할 때 그 안에 어떤 요소들이 있을지 미리 준비하지만 
+		헤드태그가 생략되면 준비 없이 표시되는 태그 요스들을 일일이 개별적으로 해석해야 하므로 속도나 프로세스의 횟수가 늘어날 수 있다.
+ -->
+ <!-- 
+ 	메타<META>태그
+ 	메타태그는 홈페이지를 만들때 헤드 태그 안에 입력되는 필요한 주요 정보들을 저장하는 등록정보 표시 태그 이다.
+ 	메타 태그에 정의된 문서 등록 정보는 검색 엔진에도 영향을 미친다. 이때의 검색엔진은 구글 네이버 등의 외부 포털 사이트뿐만 아니라 
+ 	내부적인 검색 엔진을 제작할 때에도 메타태그에 정의된 내용을 기준으로 검색 할 수 있다.
+ 	또한 사용자가 새로고침 하는 것이 아니어도 refresh를 이용하면 주기적으로 저장이라던지 몇초후 이사된다던지..등의 또 다른 성격의 문서의 주기적인 반복로딩이 가능하다. 
+ 	기본형태는
+ 	<meta http-equiv="항목이름" name="정보이름" content="정보의 값"> 이다..
+ 	
+ 				속성					값
+ 			http-equiv			content-type, refresh  등
+ http 헤더 정보에 대한 이름을 제공합니다. http 헤더 정보에 대한 값은 content에서 제공하며, name과 http-equiv 는 함께 사용하지 않습니다. 
+ http-equiv에서 정의 내 이름과 값은 html 문서 안에서 가장 먼저 실행되는 요소 입니다. 	
+ 			name					author, description, keywords 등
+ content 에 대한 이름 이다.
+ 			content				-사용자정의-
+ name 또는 http:-equiv 에 대한 값입니다.
+ 			charset				UTF-8, EUC-KR, EUC-JP, ISO-8859-1 등..
+ HTML5 문서의 문자셋을 지정..
+  -->
+ <!-- <meta name = "author" content="홍길동"> -->
+ <!-- <meta name = "keywords" content="HTML5와 자바스크립트"> -->
+ <!-- <meta name = "description" content="HTML5와 자바스크립트 알아보기"> -->
+ <!-- <meta name = "makedate" content="2015-06-02"> -->
+<!-- <meta charset="EUC-KR"> --> <!-- 메타테그의 예시 중 케릭터셋 해당 문서는 다음과 같은 방식을 문자셋팅을 채용? 지정했다 라는 뜻이고
 													Extended Unix Code  KoRean- 확장 유닉스 코드(한중일:극동아시아 문서 전산화에 주로 이용되는 8비트 문자 인코딩방법)
 													 한글( 완성형 인코딩) 이라는 뜻이다(약자 이기도 하다)..
 													 메타태그처럼 HTML에서 닫지 않는 형식의 태그가 있기도 하지만 ..  
